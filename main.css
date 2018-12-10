@@ -1,0 +1,118 @@
+@charset:uft-8;
+@import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
+
+/* Colors Stylesheet
+   Author: Gabe Kamalakis
+   Date: 11/28/2018
+*/
+
+/* Day Mode */
+
+:root {
+    --old-rose:#BC4760;
+    --old-rose2:#9C3C54;
+    --old-rose3:#7A3C5B;
+    --dark-slate:#342943;
+    --dark-slate-gray:#141424;
+    --font:#FBD275;
+    --overlay:#999999;
+}
+
+
+html {
+    background-image: linear-gradient(to bottom, var(--old-rose2), var(--dark-slate));
+    background-attachment:fixed;
+    font-family:"Fira Code", Regular, monospace;
+}
+h1{
+    font-size:4em;
+    color:var(--font);
+}
+p {
+    font-size:1.2em;
+    color:var(--font);
+}
+/* navigation bar colors */
+.nav {
+    background-color:var(--dark-slate);
+}
+a.pages {
+    color:var(--font);
+    background-color: var(--dark-slate);
+}
+
+a.pages:hover {
+    background-color:var(--old-rose3);
+}
+
+/* Tile Colors */
+div#splash {
+    background-image:url('splash.jpg');
+    background-position:center;
+    background-size:cover;
+    /*Photo by Cassi Josh on Unsplash*/
+    justify-content:center;
+    align-items:center;
+    background-color:var(--old-rose);
+}
+#splash>p1 {
+    text-align:center;
+}
+
+a.brick {
+    display: flex;
+    color:var(--font);
+    text-decoration:none;
+    width:100%;
+    height:100%;
+    align-items:center;
+    justify-content:center;
+    font-size:2em;
+    background-repeat:no-repeat;
+    background-size:cover;
+    background-color:var(--dark-slate-gray);
+    background-blend-mode: overlay;
+
+}
+a.brick:hover {
+    color:var(--font);
+    background-color:transparent;
+    background-blend-mode:overlay;
+}
+
+footer {
+    background-color: var(--dark-slate-gray);
+    color:var(--font);
+}
+/* Night Mode */
+
+/* Images */
+#gallery {
+    background-image:url('watercolor-book.jpg');
+    background-position:left;
+    }
+#gallery:hover {
+    background-image:url('watercolor-book.jpg');
+}
+#audio {
+    background-image:url('electric-piano.jpg');
+}
+#audio:hover {
+    background-image:url('electric-piano.jpg');
+}
+#projects {
+    background-image:url('drafting.jpg');
+}
+#projects:hover{
+    background-image:url('drafting.jpg');
+}
+
+#gitlab{
+    background-image:url('programming.jpg');
+}
+#gitlab:hover{
+    background-image:url('programming.jpg');
+}
+#github {
+    background-image:url('generale.png');
+}

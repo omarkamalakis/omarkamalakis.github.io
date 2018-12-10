@@ -1,0 +1,206 @@
+@charset:"utf-8";
+
+/* Layout Stylesheet
+   Author: Gabe Kamalakis
+   Date: 11/30/18
+*/
+
+/* General Styles */
+html {
+    box-sizing:border-box;
+}
+a {
+    text-decoration:none;
+    display:block;
+}
+.pages {
+    padding:15px 0px 15px 0px;
+    text-align:center;
+}
+div.box {
+    height:100%;
+    display:flex;
+}
+
+
+
+/* ============== */
+/* Mobile Layout  */
+/* ============== */
+@media only screen and (max-width:768px) {
+    body {
+        box-sizing:border-box;
+    }
+    h1 {
+        font-size:1.2em;
+    }
+    div.nav {
+        width:100%;
+        display:inline;
+        overflow:hidden;
+        margin:0;
+        height:7%;
+    }
+    a.pages {
+        width:33%;
+        display:block;
+        float:left;
+    }
+    div.container {
+        clear:both;
+		    width:95%;
+        min-height:100vh;
+        padding-top:5%;
+        padding-left:2%;
+        padding-right:2%;
+        margin:auto;
+        overflow:hidden;
+    }
+        div.wrapper {
+        display:grid;
+        height:100%;
+        grid-template-rows:repeat(8, 1fr);
+        grid-template-columns:repeat(2, 1fr);
+        grid-gap:5px;
+        margin:auto;
+}
+    div#splash {
+        grid-row:span 2;
+        grid-column:span 2;
+        justify-content:center;
+        content-align:center;
+    }
+    div.core {
+        grid-row:span 2;
+        grid-column:span 1;
+    }
+    div#project {
+        grid-row:span 2;
+        grid-column:span 1;
+    }
+    div#github {
+        grid-row:span 2;
+        grid-column:span 2;
+    }
+
+}
+
+
+/* ============== */
+/* Tablet Layout  */
+/* ============== */
+@media only screen and (min-width:768px) {
+    body {
+        width:100%;
+        height:fit-content;
+    }
+  .nav {
+        width:100%;
+        overflow:hidden;
+        display:inline;
+        height:7%;
+        margin:auto;
+    }
+  a.pages {
+        padding:15px 20px;
+        float:right;
+     }
+	div.container {
+		width:100%;
+    padding-top:5%;
+    padding:5%;
+    min-height:100vh;
+}
+  div.wrapper {
+    display:grid;
+    height:100%;
+    grid-template-rows:repeat(9, 1fr);
+    grid-template-columns:repeat(4, 1fr);
+    grid-gap:15px;
+  }
+  div.box {
+      display:flex;
+  }
+  div.large {
+      grid-row:span 2;
+      grid-column:span 3;
+  }
+  div.core {
+      grid-row:span 3;
+      grid-column:span 1;
+  }
+  div.small {
+      grid-row:span 1;
+      grid-column:span 1;
+  }
+
+}
+
+/* ============== */
+/* Desktop Layout */
+/* ============== */
+
+
+@media only screen and (min-width: 992px) {
+	body {
+		width:60%;
+		margin:auto;
+    display:flex;
+    flex-wrap:wrap;
+    height:fit-content;
+  }
+  .nav {
+      width:90%;
+      overflow:hidden;
+      display:inline;
+      height:7%;
+      margin:auto;
+      position:relative;
+      top:5%;
+  }
+  a.pages {
+      padding:15px 20px;
+      float:right;
+}
+
+/* These are the "Tile" styles. This uses a grid template to generate
+the grid where each of the links and other texts will be placed. Each
+box can flex and change sizes depending on the size of the screen */
+
+	div.container {
+		width:100%;
+    padding-top:6%;
+    min-height:150vh;
+    margin:auto;
+}
+  div.wrapper {
+      display:grid;
+      height:100%;
+      grid-template-rows:repeat(9, minmax(150px,1fr));
+      grid-template-columns:repeat(3, 1fr);
+      grid-row-gap:30px;
+      grid-column-gap:10px;
+  }
+  div.box {
+      display:flex;
+  }
+  div.large {
+      grid-row:span 2;
+      grid-column:span 3;
+  }
+  div.core {
+      grid-row:span 3;
+      grid-column:span 1;
+  }
+  div.small {
+      grid-row:span 1;
+      grid-column:span 1;
+  }
+
+  footer {
+      width:100%;
+      text-align:center;
+      position:relative;
+  }
+
+}
