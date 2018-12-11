@@ -35,8 +35,8 @@ div.box {
     body {
         box-sizing:border-box;
     }
-    h1 {
-        font-size:1.2em;
+    h1#special {
+        font-size:2.5 em;
     }
     div.nav {
         width:100%;
