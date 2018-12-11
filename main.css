@@ -1,7 +1,8 @@
 @charset:uft-8;
 @import url(https://cdn.jsdelivr.net/gh/tonsky/FiraCode@1.206/distr/fira_code.css);
 
-/* Colors Stylesheet
+/*
+   Colors Stylesheet
    Author: Gabe Kamalakis
    Date: 11/28/2018
 */
@@ -28,10 +29,55 @@ h1{
     font-size:4em;
     color:var(--font);
 }
+h2 {
+    font-size:2.5em;
+    color:var(--font)
+}
+ {
+    ;
+}
 p {
     font-size:1.2em;
     color:var(--font);
 }
+
+.contentBox {
+    color:var(--font);
+    background-color:var(--dark-slate);
+}
+.skill {
+    font-size:1.2em;
+}
+
+/* Table Styles */
+div#calendar {
+    margin:auto;
+    justify-content:center;
+}
+table {
+    margin:auto;
+    width:100%;
+    padding:5%;
+}
+
+th {
+    font-size:1.3em;
+    color:var(--font);
+    border:2px solid var(--old-rose2);
+}
+td {
+    font-size:1em;
+    text-align:center;
+    color:var(--font);
+    border:1px solid var(--old-rose2);
+    padding:10px 5px 10px 5px;
+}
+.event {
+    font-weight:bold;
+    text-align:left;
+    color:var(--font)
+}
+
 /* navigation bar colors */
 .nav {
     background-color:var(--dark-slate);
@@ -72,37 +118,42 @@ a.brick {
     background-size:cover;
     background-color:var(--dark-slate-gray);
     background-blend-mode: overlay;
-
 }
 a.brick:hover {
     color:var(--font);
     background-color:transparent;
     background-blend-mode:overlay;
+    border:2px solid var(--old-rose);
 }
 
 footer {
     background-color: var(--dark-slate-gray);
     color:var(--font);
 }
+
 /* Night Mode */
+
 
 /* Images */
 #gallery {
     background-image:url('watercolor-book.jpg');
     background-position:left;
     }
+/* Photo by Tim Arterbury on Unsplash */
 #gallery:hover {
     background-image:url('watercolor-book.jpg');
 }
 #audio {
     background-image:url('electric-piano.jpg');
 }
+/* Photo by James Owen on Unsplash */
 #audio:hover {
     background-image:url('electric-piano.jpg');
 }
 #projects {
     background-image:url('drafting.jpg');
 }
+/* Photo by Daniel McCullough on Unsplash */
 #projects:hover{
     background-image:url('drafting.jpg');
 }
@@ -110,9 +161,58 @@ footer {
 #gitlab{
     background-image:url('programming.jpg');
 }
+/* Photo by Arif Riyanto on Unsplash */
 #gitlab:hover{
     background-image:url('programming.jpg');
 }
 #github {
     background-image:url('generale.png');
 }
+
+/* Social Media (taken from w3 schools social media tagging) */
+li {
+    list-style-type:none;
+    display:inline;
+}
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+.fa-tumblr {
+    background: #2c4762;
+    color: white;
+}
+
+
+
+
+
+

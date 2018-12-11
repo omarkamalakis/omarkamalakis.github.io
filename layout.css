@@ -21,13 +21,17 @@ div.box {
     height:100%;
     display:flex;
 }
-
-
+.side {
+    margin:auto;
+    margin-top:10%;
+    text-align:center;
+    margin-bottom:37%;
+}
 
 /* ============== */
 /* Mobile Layout  */
 /* ============== */
-@media only screen and (max-width:768px) {
+@media only screen and (max-width:767px) {
     body {
         box-sizing:border-box;
     }
@@ -64,6 +68,10 @@ div.box {
         grid-gap:5px;
         margin:auto;
 }
+        article {
+            width:95%;
+            margin:auto;
+        }
     div#splash {
         grid-row:span 2;
         grid-column:span 2;
@@ -83,74 +91,38 @@ div.box {
         grid-column:span 2;
     }
 
+    .contentBox {
+        height:100%;
+        display:grid;
+        grid-template-rows:repeat(7, fr);
+        grid-template-rows:repeat(1, fr);
+        grid-gap:5px;
+    }
+    .skill {
+        display:flex;
+        grid-row:span 1;
+        grid-column: span 1;
+        padding:10px 15px 10px 15px;
+        justify-content:center;
+        align-items:center;
+    }
 }
 
 
 /* ============== */
-/* Tablet Layout  */
+/* Tablet Layout  *
+
 /* ============== */
 @media only screen and (min-width:768px) {
-    body {
-        width:100%;
-        height:fit-content;
-    }
-  .nav {
-        width:100%;
-        overflow:hidden;
-        display:inline;
-        height:7%;
-        margin:auto;
-    }
-  a.pages {
-        padding:15px 20px;
-        float:right;
-     }
-	div.container {
-		width:100%;
-    padding-top:5%;
-    padding:5%;
-    min-height:100vh;
-}
-  div.wrapper {
-    display:grid;
-    height:100%;
-    grid-template-rows:repeat(9, 1fr);
-    grid-template-columns:repeat(4, 1fr);
-    grid-gap:15px;
-  }
-  div.box {
-      display:flex;
-  }
-  div.large {
-      grid-row:span 2;
-      grid-column:span 3;
-  }
-  div.core {
-      grid-row:span 3;
-      grid-column:span 1;
-  }
-  div.small {
-      grid-row:span 1;
-      grid-column:span 1;
-  }
-
-}
-
-/* ============== */
-/* Desktop Layout */
-/* ============== */
-
-
-@media only screen and (min-width: 992px) {
 	body {
-		width:60%;
+		width:80%;
 		margin:auto;
     display:flex;
     flex-wrap:wrap;
     height:fit-content;
   }
   .nav {
-      width:90%;
+      width:100%;
       overflow:hidden;
       display:inline;
       height:7%;
@@ -202,5 +174,31 @@ box can flex and change sizes depending on the size of the screen */
       text-align:center;
       position:relative;
   }
+  .contentBox {
+      height:100%;
+      display:grid;
+      grid-template-rows:repeat(7, fr);
+      grid-template-rows:repeat(1, fr);
+      grid-gap:5px;
+      margin-bottom:10%;
+  }
+  .skill {
+      display:flex;
+      grid-row:span 1;
+      grid-column: span 1;
+      padding:10px 15px 10px 15px;
+      justify-content:center;
+      align-items:center;
+  }
 
+
+}
+/* Desktop Layout */
+/* note: the only changes I needed to make here (due to the design being so narrow)
+was a few body adjustments. Everything else is the same */
+
+@media only screen and (min-width: 992px) {
+    body {
+        width:60%;
+    }
 }
