@@ -93,7 +93,7 @@ a.pages:hover {
 
 /* Tile Colors */
 div#splash {
-    background-image:url('image/splash.jpg');
+    background-image:url('images/splash.jpg');
     background-position:center;
     background-size:cover;
     /*Photo by Cassi Josh on Unsplash*/
@@ -136,34 +136,34 @@ footer {
 
 /* Images */
 #gallery {
-    background-image:url('image/watercolor-book.jpg');
+    background-image:url('images/watercolor-book.jpg');
     background-position:left;
     }
 /* Photo by Tim Arterbury on Unsplash */
 #gallery:hover {
-    background-image:url('image/watercolor-book.jpg');
+    background-image:url('images/watercolor-book.jpg');
 }
 #audio {
-    background-image:url('image/electric-piano.jpg');
+    background-image:url('images/electric-piano.jpg');
 }
 /* Photo by James Owen on Unsplash */
 #audio:hover {
-    background-image:url('image/electric-piano.jpg');
+    background-image:url('images/electric-piano.jpg');
 }
 #projects {
-    background-image:url('image/drafting.jpg');
+    background-image:url('images/drafting.jpg');
 }
 /* Photo by Daniel McCullough on Unsplash */
 #projects:hover{
-    background-image:url('image/drafting.jpg');
+    background-image:url('images/drafting.jpg');
 }
 
 #gitlab{
-    background-image:url('image/programming.jpg');
+    background-image:url('images/programming.jpg');
 }
 /* Photo by Arif Riyanto on Unsplash */
 #gitlab:hover{
-    background-image:url('image/programming.jpg');
+    background-image:url('images/programming.jpg');
 }
 #github {
     background-image:url('generale.png');
