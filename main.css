@@ -33,9 +33,6 @@ h2 {
     font-size:2.5em;
     color:var(--font)
 }
- {
-    ;
-}
 p {
     font-size:1.2em;
     color:var(--font);
@@ -131,7 +128,6 @@ footer {
     color:var(--font);
 }
 
-/* Night Mode */
 
 
 /* Images */
