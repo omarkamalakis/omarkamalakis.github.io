@@ -153,11 +153,11 @@ footer {
 #projects {
     background-image:url('images/drafting.jpg');
 }
-/* Photo by Daniel McCullough on Unsplash */
+/* Photo by Daniel McCullough on Unsplash
 #projects:hover{
     background-image:url('images/drafting.jpg');
 }
-
+*/
 #gitlab{
     background-image:url('images/programming.jpg');
 }
@@ -165,8 +165,9 @@ footer {
 #gitlab:hover{
     background-image:url('images/programming.jpg');
 }
+
 #github {
-    background-image:url('generale.png');
+    background-image:url('images/welder.jpg');
 }
 
 /* Social Media (taken from w3 schools social media tagging) */
