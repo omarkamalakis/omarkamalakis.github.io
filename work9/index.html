@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
+  <meta content="#ffffff" name="theme-color" />
+  <meta content="#da532c" name="msapplication-TileColor" />
+
+  
+  
+  
+  
+  
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.6.1/themes/folio/galleria.folio.min.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/mapbox-gl@2.1.1/dist/mapbox-gl.min.css" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css" rel="stylesheet" />
+  <link href="https:&#x2F;&#x2F;gabekamalakis.com&#x2F;deep-thought.css" rel="stylesheet" />
+
+  <title>
+    
+ | Homelab Part 1: Initial Plans
+
+  </title>
+
+  
+
+  
+</head>
+
+<body class="has-background-white">
+  <nav aria-label="section navigation" class="navbar is-light" role="navigation">
+    <div class="container">
+      <div class="navbar-brand">
+        <a class="navbar-item is-size-5 has-text-weight-bold" href="https:&#x2F;&#x2F;gabekamalakis.com"></a>
+        <a aria-expanded="false" aria-label="menu" class="navbar-burger burger" data-target="navMenu" role="button">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      </div>
+      <div class="navbar-menu" id="navMenu">
+        <div class="navbar-end has-text-centered">
+          
+          
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;gabekamalakis.com&#x2F;">
+            Home
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;gabekamalakis.com&#x2F;posts">
+            Posts
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;gabekamalakis.com&#x2F;docs">
+            Docs
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;gabekamalakis.com&#x2F;tags">
+            Tags
+          </a>
+          
+          <a class="navbar-item has-text-weight-semibold" href="https:&#x2F;&#x2F;gabekamalakis.com&#x2F;categories">
+            Categories
+          </a>
+          
+          
+          
+          <a class="navbar-item" id="nav-search" title="Search" data-target="#search-modal">
+            <span class="icon">
+              <i class="fas fa-search"></i>
+            </span>
+          </a>
+          <a class="navbar-item" id="dark-mode" title="Switch to dark theme">
+            <span class="icon">
+              <i class="fas fa-adjust"></i>
+            </span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column is-8 is-offset-2">
+        <article class="box">
+          <h1 class="title">
+            Homelab Part 1: Initial Plans
+          </h1>
+          <p class="subtitle"></p>
+          <div class="columns is-multiline is-gapless">
+            <div class="column is-8">
+              
+<span class="icon-text has-text-grey">
+  <span class="icon">
+    <i class="fas fa-user"></i>
+  </span>
+  <span>Gabe Kamalakis published on</span>
+  <span class="icon">
+    <i class="far fa-calendar-alt"></i>
+  </span>
+  <span><time datetime="2020-01-02T20:02:19+05:30">January 02, 2020</time></span>
+</span>
+
+            </div>
+            <div class="column is-4 has-text-right-desktop">
+              
+<span class="icon-text has-text-grey">
+  <span class="icon">
+    <i class="far fa-clock"></i>
+  </span>
+  <span>3 min,</span>
+  <span class="icon">
+    <i class="fas fa-pencil-alt"></i>
+  </span>
+  <span>458 words</span>
+</span>
+
+            </div>
+            <div class="column">
+              
+            </div>
+            <div class="column has-text-right-desktop">
+              
+            </div>
+          </div>
+          <div class="content mt-2">
+            <p>After procuring a used workstation, I set off to build a homelab and take my first steps into virtualization...</p>
+<!--more-->
+<h1 id="the-machine">The machine:</h1>
+<p>The computer is a used Dell Precision workstation that a church did not need anymore. While being fairly light on storage options, the PC has a Xeon socket which makes it perfect for a server.</p>
+<h3 id="specifications">Specifications</h3>
+<ul>
+<li>CPU -&gt; Dual Core Xeon (will upgrade to hexacore Xeon soon)</li>
+<li>RAM -&gt; 8 GB</li>
+<li>Storage -&gt; 500gb with 3 total drive slots (will add 4TB drive from Raspberrypi)</li>
+<li>Networking -&gt; standard Dell motherboard NIC (unknown transfer rates)</li>
+<li>Video Card -&gt; Unknown</li>
+</ul>
+<h3 id="software-plans">Software Plans</h3>
+<p>This lab will will act as a bare-metal (Type 1) hypervisor for around 4-5 virtual machines (with 3-4 running 24/7). The hypervisor will either be ProxMox or using a minimal Fedora installation using KVM. The Computer has support for hardware virtualization. Each VM will be using a very lightweight Linux distribution called Alpine Linux and run the bare minimum for the software that it needs to run. Here are some tasks that the homelab will be running:</p>
+<ul>
+<li><strong>Plex Media Server</strong></li>
+<li><strong>Minecraft Server</strong></li>
+<li>A web server (for this website)</li>
+<li>An email server</li>
+<li><strong>NextCloud</strong></li>
+<li>Synapse</li>
+<li>PfSense</li>
+<li>TaskServer</li>
+<li>Remote persistent TMUX</li>
+<li>DevOps:
+<ul>
+<li>Ansible</li>
+<li>Git repositories</li>
+<li>Kubernetes</li>
+</ul>
+</li>
+<li>A documentation hub (like a wiki)</li>
+<li><strong>System images for laptop/PC</strong></li>
+<li><strong>Filesystem backups</strong></li>
+<li>Personal AUR</li>
+<li>Spacewalk</li>
+</ul>
+<p>Many of these are experimental, so if they don't work or I need the processing power for other things (Minecraft/Plex), then I can easily suspend/freeze these VMs.</p>
+<h3 id="checking-the-host">Checking the Host:</h3>
+<p>To actually begin working on the homelab, I began by actually checking if the hardware that we got actually works. It had come with an (presumably) empty hard drive and working video cards along with 4 GB of RAM. I found a few cables, including a DP -&gt; DVI converter since it had no HDMI ports (and I have no Display Port cables). I also cracked open the case to see how much dust had built up within the case. The case itself is very modular, since it was built as a workstation that had to be quick to repair as well as a bit space efficient. The case was extremely dusty and had to be cleaned out carefully. I also tore off the CPU heatsink and repasted it since the thermal paste was completely dry. After servicing the PC turned on and posted without too many problems. I made a few tweaks in the bios and ran a diagnostics to make sure everything was working properly. I ran into my first problem, which is that it does not like booting without all 3 of the HDD slots populated (it thinks they are missing and require a key press to boot). This will become a problem later.</p>
+
+          </div>
+        </article>
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+
+  
+  <section class="modal" id="search-modal">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">Search</p>
+      </header>
+      <section class="modal-card-body">
+        <div class="field mb-2">
+          <div class="control">
+            <input class="input" id="search" placeholder="Search this website." type="search" />
+          </div>
+        </div>
+        <div class="search-results">
+          <div class="search-results__items"></div>
+        </div>
+      </section>
+    </div>
+    <button aria-label="close" class="modal-close is-large"></button>
+  </section>
+  
+
+
+  
+
+
+
+  
+
+
+
+  <footer class="footer py-4">
+    <div class="content has-text-centered">
+      <p>
+        Built with
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-code"></i>
+          </span>
+          <span>code</span>
+        </span>
+        and
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-heart"></i>
+          </span>
+          <span>love</span>
+        </span>
+      </p>
+      <p>
+        Powered by
+        <span class="icon-text">
+          <span class="icon">
+            <i class="fas fa-power-off"></i>
+          </span>
+          <span>zola</span>
+        </span>
+      </p>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.6.1/galleria.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@8.9.2/dist/mermaid.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.xkcd@1.1.13/dist/chart.xkcd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mapbox-gl@2.1.1/dist/mapbox-gl.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/galleria/1.6.1/themes/folio/galleria.folio.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/elasticlunr/0.9.6/elasticlunr.min.js"></script>
+  <script src="https:&#x2F;&#x2F;gabekamalakis.com&#x2F;search_index.en.js"></script>
+  <script src="https:&#x2F;&#x2F;gabekamalakis.com&#x2F;js&#x2F;site.js"></script>
+
+  
+
+
+
+
+</body>
+
+</html>
